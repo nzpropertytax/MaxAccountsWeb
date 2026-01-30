@@ -2,67 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>admin/</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>admin/about-us.html</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>admin/</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>admin/services.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>admin/portfolio.html</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>admin/about.html</loc>
-        <lastmod>2026-01-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>admin/gallery.html</loc>
-        <lastmod>2026-01-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>admin/news.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>admin/contact.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>admin/newsfeed/873b1023c46e4653b4f1176a65b523f3.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <loc>admin/gallery.html</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>admin/news.html</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>admin/newsfeed/we-have-moved.html</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>admin/newsfeed/803416944f4946bbad3274ad4bf8b47f.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <loc>admin/newsfeed/new-signs-from-mysign.html</loc>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>admin/newsfeed/6f8d086f530e448b9f77d02c248ac7f4.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>admin/newsfeed/1f8fd76d7e3a443f94f6d01878347c4e.html</loc>
-        <lastmod>2026-01-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>admin/newsfeed/c4e2bba6-40c1-4e91-9e40-ec4ebef01436.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

@@ -69,20 +69,24 @@
 }
     </style>
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/site.min.css" />
-    <link rel="stylesheet" href="../css/slider-groups.min.css" />
-    <link rel="stylesheet" href="../css/team-members.min.css" />
+    <!-- Public CSS files -->
+    <link rel="stylesheet" href="../css/public/site.min.css" />
+    <link rel="stylesheet" href="../css/public/slider-groups.min.css" />
+    <link rel="stylesheet" href="../css/public/team-members.min.css" />
+    <link rel="stylesheet" href="../css/public/bootstrap.extension.min.css" />
+    <link rel="stylesheet" href="../css/public/theme-variables.min.css" />
+    <!-- Admin CSS (excluded from static site generation) -->
     <link rel="stylesheet" href="../MaxPayroll.Website.2wld0smmpi.styles.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap.extension.min.css" />
-    <link rel="stylesheet" href="../css/theme-variables.min.css" />
     
-    <!-- Site-specific CSS files -->
+    <!-- Site-specific CSS files (from WebSite.Settings) -->
+    
+    <!-- Site-specific CSS overrides (from SiteSettings.AssetsSubdirectory) -->
     
     <!-- Site-specific inline custom CSS -->
     
     
-<link rel="stylesheet" href="/css/preview-editor.css" id="preview-editor-styles">
+<link rel="stylesheet" href="/css/public/preview-editor.css" id="preview-editor-styles">
 </head>
 <body>
 <header>
@@ -90,16 +94,20 @@
 
 
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">
-            <img src="~/images/Logo.svg" alt="Max Accountancy"/ data-editable="true" data-field="image" data-image-src="~/images/Logo.svg">    
-        </a>
+<div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img alt="Max Accountancy" onerror="this.style.display='none'"/>    
+    </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
+                        </li>
                         <li class="nav-item">
                         </li>
                         <li class="nav-item">
@@ -111,15 +119,18 @@
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="&quot;m-10&quot;">
                                     <li>
-                                            <a class="dropdown-item" href="../services/group/income-tax.html">Income Tax (1)</a>
+                                            <a class="dropdown-item" href="../services/group/gst-and-payroll.html">GST and Payroll (0)</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="../services/group/gst-and-payroll.html">gst-and-payroll (3)</a>
+                                            <a class="dropdown-item" href="../services/group/income-tax.html">Income Tax (0)</a>
                                     </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link text-dark " href="../Pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link text-dark " href="../Portfolio.html">Websites</a>
                         </li>
                         <li class="nav-item dropdown hover-dropdown">
                                 <a class="nav-link dropdown-toggle text-dark active" href="../NewsFeed.html" id="&quot;m-12&quot;" role="button" aria-expanded="false">
@@ -130,10 +141,13 @@
                                             <a class="dropdown-item" href="../newsfeed.html">All Articles</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="../newsfeed/category/payroll.html">Payroll (1)</a>
+                                            <a class="dropdown-item" href="../newsfeed/category/other-news.html">Other News (0)</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="../newsfeed/category/tax-compliance.html">Tax Compliance (2)</a>
+                                            <a class="dropdown-item" href="../newsfeed/category/payroll.html">Payroll (3)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../newsfeed/category/tax-compliance.html">Tax Compliance (3)</a>
                                     </li>
                             </ul>
                         </li>
@@ -177,10 +191,10 @@
                                             <a class="dropdown-item" href="../gallery/category/banner.html">banner (4)</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="../gallery/category/opening.html">Opening (0)</a>
+                                            <a class="dropdown-item" href="../gallery/category/opening.html">Opening (1)</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="../gallery/category/xmas-2025.html">Xmas 2025 (18)</a>
+                                            <a class="dropdown-item" href="../gallery/category/xmas-2025.html">Xmas 2025 (17)</a>
                                     </li>
                             </ul>
                         </li>
@@ -201,7 +215,7 @@
 </nav>
 
     <div class="banner">
-        <div class="image-slider-container" data-slider-id="slider-f2b2c178" data-transition-effect="fade"><div class="image-display"><img src="../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg" alt="line_oa_chat_251217_104727" class="slider-image" data-index="0" / data-editable="true" data-field="image" data-image-src="../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg">
+        <div class="image-slider-container" data-slider-id="slider-ae401b0c" data-transition-effect="fade"><div class="image-display"><img src="../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" class="slider-image" data-index="0" / data-editable="true" data-field="image" data-image-src="../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg">
             
             <div class="slider-overlay"><div class="slider-header"><h1 class="slider-title" data-editable="true" data-field="text">Max Accountancy Ltd</h1>
                     <h2 class="slider-subtitle" data-editable="true" data-field="text">GST - PAYROLL - TAX RETURNS</h2></div>
@@ -209,12 +223,13 @@
                 <div class="image-controls"><button class="btn btn-prev" data-action="prev" title><i class="fas fa-chevron-left"></i></button>
                     
                     
-                    <button class="btn btn-next" data-action="next" title><i class="fas fa-chevron-right"></i></button></div></div></div><div class="slider-data" style="display:none;" data-images-json="[{&quot;id&quot;:&quot;063dadbbc9874ac5b798eb72b114817c&quot;,&quot;title&quot;:&quot;line_oa_chat_251217_104727&quot;,&quot;alt&quot;:&quot;line_oa_chat_251217_104727&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;89447d5443144110af06930410ccd9b2&quot;,&quot;title&quot;:&quot;line_oa_chat_251217_104858&quot;,&quot;alt&quot;:&quot;line_oa_chat_251217_104858&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;9853d6e30ce441deaf8ce87d90de0255&quot;,&quot;title&quot;:&quot;line_oa_chat_251217_105055&quot;,&quot;alt&quot;:&quot;line_oa_chat_251217_105055&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;2ccbd00f83c447ab856d51f65e1a4af0&quot;,&quot;title&quot;:&quot;line_oa_chat_251217_104706&quot;,&quot;alt&quot;:&quot;line_oa_chat_251217_104706&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null}]">../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg|../images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg|../images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg|../images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg</div></div>
+                    <button class="btn btn-next" data-action="next" title><i class="fas fa-chevron-right"></i></button></div></div></div><div class="slider-data" style="display:none;" data-images-json="[{&quot;id&quot;:&quot;063dadbbc9874ac5b798eb72b114817c&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Jenny, Jaiselle and Manju&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Jenny, Jaiselle and Manju&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;89447d5443144110af06930410ccd9b2&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Jenny, Manju and Aditi&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Jenny, Manju and Aditi&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;9853d6e30ce441deaf8ce87d90de0255&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Jenny and Kate&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Jenny and Kate&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;2ccbd00f83c447ab856d51f65e1a4af0&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Craig and Andre&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Craig and Andre&quot;,&quot;url&quot;:&quot;../images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null}]">../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg|../images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg|../images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg|../images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg</div></div>
     </div>
 </header>
-    <div class="container-xl">
-        <main role="main" class="pb-3">
-            
+    <div class="page-wrapper">
+        <div class="container-xl">
+            <main role="main" class="pb-3">
+                
 <section class="news-feed-article py-5">
     <div class="container">
         <article class="card article-content"><div class="card-header"><h2 class="mb-0" data-editable="true" data-field="text">Residential rental property deductions</h2></div>
@@ -490,16 +505,44 @@
     </div>
 </section>
 
-        </main>
+            </main>
+        </div>
     </div>
 
     
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2026 - Max Accountancy
-        <span class="mx-2">|</span>
-        <strong>Pages:</strong>
+        <div class="row py-3">
+            <!-- Contact Details -->
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <strong class="d-block mb-2">Max Accountancy</strong>
+                        <small class="d-block text-muted">
+                                    <span>Unit 5, 245 Blenheim Road</span><br />
+                                    <span>Upper Riccarton</span><br />
+                                <span>Christchurch</span>
+                                    <span> 8041</span>
+                                <br />
+                        </small>
+                        <small class="d-block">
+                            <i class="fa fa-phone me-1"></i>
+                            <a href="tel:034211168">03 421 1168</a>
+                        </small>
+                        <small class="d-block">
+                            <i class="fa fa-envelope me-1"></i>
+                            
+                        </small>
+                </div>
+            
+            <!-- Footer Menu -->
+            <div class="col-md-4 mb-3 mb-md-0 text-md-center">
+            </div>
+            
+            <!-- Social Links & Copyright -->
+            <div class="col-md-4 text-md-end">
+                <small class="text-muted">&copy; 2026 Max Accountancy</small>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -516,17 +559,18 @@
             <button class="btn btn-primary btn-sm" onclick="window.cookieConsent.accept()"><i class="fa fa-check me-1"></i>Accept All
             </button></div></div></div>
 
-    <!-- SEO Analyzer Panel (only show for authenticated admin users, not static generation) -->
+    <!-- SEO Analyzer Panel (only show for authenticated admin users, not static generation, not SuperAdmin pages) -->
 
     <script src="../lib/jquery/dist/jquery.min.js"></script>
     <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/site.min.js"></script>
-    <script src="../js/slider-shared.min.js"></script>
-    <script src="../js/pricing.min.js"></script>
-    <script src="../js/image-slider.min.js"></script>
+    <!-- Public JS files -->
+    <script src="../js/public/site.min.js"></script>
+    <script src="../js/public/slider-shared.min.js"></script>
+    <script src="../js/public/image-slider.min.js"></script>
+    <!-- Site-specific JS overrides (from SiteSettings.AssetsSubdirectory) -->
     
 <script src="/js/static-logger.js"></script>
-<script src="/js/preview-editor.js" id="preview-editor-script"></script>
+<script src="/js/public/preview-editor.js" id="preview-editor-script"></script>
 </body>
 </html>
 
