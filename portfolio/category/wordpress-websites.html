@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordpress Websites - Portfolio - Max Accountancy</title>
+    <meta name="description" />
+    
+    <!-- Dynamic Theme CSS Variables -->
+    <style>
+        :root {
+    /* Primary Colors */
+    --site-primary: #1b6ec2;
+    --site-primary-light: #258cfb;
+    --site-primary-dark: #0d5ba8;
+
+    /* Secondary/Accent Colors */
+    --site-secondary: #6c757d;
+    --site-accent: #20c997;
+    --site-accent-light: #4ade80;
+
+    /* Background Colors */
+    --site-bg: #ffffff;
+    --site-bg-alt: #e6f2ff;
+    --site-card-bg: rgba(230, 242, 255, 0.7);
+
+    /* Text Colors */
+    --site-text: #1b3a5d;
+    --site-text-muted: #6c757d;
+    --site-heading: #1a397b;
+
+    /* Link Colors */
+    --site-link: #0077cc;
+    --site-link-hover: #0056b3;
+
+    /* Border Colors */
+    --site-border: #b3d1f7;
+    --site-border-light: rgba(179, 209, 247, 0.35);
+
+    /* Button Colors */
+    --site-btn-primary-bg: #1b6ec2;
+    --site-btn-primary-text: #ffffff;
+    --site-btn-secondary-bg: #6c757d;
+    --site-btn-secondary-text: #ffffff;
+
+    /* Navbar Colors */
+    --site-navbar-bg: #ffffff;
+    --site-navbar-text: #333333;
+    --site-navbar-link-hover: #add8e6;
+
+    /* Footer Colors */
+    --site-footer-bg: #1a397b;
+    --site-footer-text: #ffffff;
+
+    /* Typography */
+    --site-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --site-font-size-base: 16px;
+    --site-line-height: 1.6;
+
+    /* Border Radius */
+    --site-radius-sm: 8px;
+    --site-radius-md: 16px;
+    --site-radius-lg: 28px;
+
+    /* Shadows */
+    --site-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --site-shadow-medium: 0 4px 20px rgba(27, 110, 194, 0.1);
+}
+    </style>
+    <link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Public CSS files -->
+    <link rel="stylesheet" href="../../css/public/site.min.css" />
+    <link rel="stylesheet" href="../../css/public/slider-groups.min.css" />
+    <link rel="stylesheet" href="../../css/public/team-members.min.css" />
+    <link rel="stylesheet" href="../../css/public/bootstrap.extension.min.css" />
+    <link rel="stylesheet" href="../../css/public/theme-variables.min.css" />
+    <!-- Admin CSS (excluded from static site generation) -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Site-specific CSS files (from WebSite.Settings) -->
+    
+    <!-- Site-specific CSS overrides (from SiteSettings.AssetsSubdirectory) -->
+    
+    <!-- Site-specific inline custom CSS -->
+    
+    
+<link rel="stylesheet" href="/css/public/preview-editor.css" id="preview-editor-styles">
+</head>
+<body>
+<header>
+    
+
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
+<div class="container">
+    <a class="navbar-brand" href="../../index.html">
+        <img alt="Max Accountancy" onerror="this.style.display='none'"/>    
+    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                                <a class="nav-link text-dark " href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown hover-dropdown">
+                                <a class="nav-link dropdown-toggle text-dark " href="../../services.html" id="&quot;m-10&quot;" role="button" aria-expanded="false">
+                                    Services
+                                </a>
+                            <ul class="dropdown-menu" aria-labelledby="&quot;m-10&quot;">
+                                    <li>
+                                            <a class="dropdown-item" href="../../services/group/gst-and-payroll.html">GST and Payroll (3)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../services/group/income-tax.html">Income Tax (4)</a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link text-dark " href="../../pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link text-dark active" href="../../portfolio.html">Websites</a>
+                        </li>
+                        <li class="nav-item dropdown hover-dropdown">
+                                <a class="nav-link dropdown-toggle text-dark " href="../../news-feed.html" id="&quot;m-12&quot;" role="button" aria-expanded="false">
+                                    News Feed
+                                </a>
+                            <ul class="dropdown-menu" aria-labelledby="&quot;m-12&quot;">
+                                    <li>
+                                            <a class="dropdown-item" href="../../newsfeed.html">All Articles</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../newsfeed/category/other-news.html">Other News (0)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../newsfeed/category/payroll.html">Payroll (2)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../newsfeed/category/tax-compliance.html">Tax Compliance (0)</a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown hover-dropdown">
+                                <a class="nav-link dropdown-toggle text-dark " href="../../about-us.html" id="&quot;m-15&quot;" role="button" aria-expanded="false">
+                                    About Us
+                                </a>
+                            <ul class="dropdown-menu" aria-labelledby="&quot;m-15&quot;">
+                                    <li>
+                                            <a class="dropdown-item" href="../../AboutUs.html">About Max Accountancy</a>
+                                    </li>
+                                    <li>
+                                            
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../team/department/company-dog.html">Company Dog (0)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../team/department/customer-services.html">Customer Services (0)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../team/department/it-services.html">IT Services (0)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../team/department/management.html">Management (0)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../team/department/payroll.html">Payroll (0)</a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown hover-dropdown">
+                                <a class="nav-link dropdown-toggle text-dark " href="../../Gallery.html" id="&quot;9263dfa9-6bb4-415c-bef4-5ed0f53c5070&quot;" role="button" aria-expanded="false">
+                                    Gallery
+                                </a>
+                            <ul class="dropdown-menu" aria-labelledby="&quot;9263dfa9-6bb4-415c-bef4-5ed0f53c5070&quot;">
+                                    <li>
+                                            <a class="dropdown-item" href="../../Gallery.html">All Photos</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../gallery/category/banner.html">banner (5)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../gallery/category/opening.html">Opening (1)</a>
+                                    </li>
+                                    <li>
+                                            <a class="dropdown-item" href="../../gallery/category/xmas-2025.html">Xmas 2025 (17)</a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link text-dark " href="../../contact-us.html">Contact Us</a>
+                        </li>
+            </ul>
+            <div class="d-flex align-items-center ms-sm-3">
+                    <!-- Pricing Calculator Button -->
+                    <a href="https://localhost:7168/" class="btn btn-success btn-sm me-2 pricing-calc-btn" target="_blank" title="Open Pricing Calculator">
+                        <i class="fa fa-calculator me-1"></i>
+                        <span class="d-none d-md-inline">Get a Quote</span>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div class="banner">
+        <div class="image-slider-container" data-slider-id="slider-28d61aba" data-transition-effect="fade"><div class="image-display"><img src="../../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" class="slider-image" data-index="0" / data-editable="true" data-field="image" data-image-src="../../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg">
+            
+            <div class="slider-overlay"><div class="slider-header"><h1 class="slider-title" data-editable="true" data-field="text">Max Accountancy Ltd</h1>
+                    <h2 class="slider-subtitle" data-editable="true" data-field="text">GST - PAYROLL - TAX RETURNS</h2></div>
+                
+                <div class="image-controls"><button class="btn btn-prev" data-action="prev" title><i class="fas fa-chevron-left"></i></button>
+                    
+                    
+                    <button class="btn btn-next" data-action="next" title><i class="fas fa-chevron-right"></i></button></div></div></div><div class="slider-data" style="display:none;" data-images-json="[{&quot;id&quot;:&quot;063dadbbc9874ac5b798eb72b114817c&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Jenny, Jaiselle and Manju&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Jenny, Jaiselle and Manju&quot;,&quot;url&quot;:&quot;../../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;89447d5443144110af06930410ccd9b2&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Jenny, Manju and Aditi&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Jenny, Manju and Aditi&quot;,&quot;url&quot;:&quot;../../images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;9853d6e30ce441deaf8ce87d90de0255&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Jenny and Kate&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Jenny and Kate&quot;,&quot;url&quot;:&quot;../../images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;2ccbd00f83c447ab856d51f65e1a4af0&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;Christmas celebration photos -Craig and Andre&quot;,&quot;alt&quot;:&quot;Christmas celebration photos -Craig and Andre&quot;,&quot;url&quot;:&quot;../../images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null},{&quot;id&quot;:&quot;5e22250bd1ab4324b257a1a8dfc4dcbd&quot;,&quot;siteId&quot;:null,&quot;title&quot;:&quot;gandr-collage (2)&quot;,&quot;alt&quot;:&quot;gandr-collage (2)&quot;,&quot;url&quot;:&quot;../../images/MaxAccountancy/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg&quot;,&quot;imagePosition&quot;:null,&quot;objectFit&quot;:null,&quot;opacity&quot;:null,&quot;scale&quot;:null,&quot;borderRadius&quot;:null,&quot;filter&quot;:null,&quot;shadow&quot;:null,&quot;padding&quot;:null,&quot;cssClass&quot;:null}]">../../images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg|../../images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg|../../images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg|../../images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg|/images/MaxAccountancy/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg</div></div>
+    </div>
+</header>
+    <div class="page-wrapper">
+        <div class="container-xl">
+            <main role="main" class="pb-3">
+                
+<section class="portfolio-category py-5">
+    <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../portfolio.html">Portfolio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Wordpress Websites</li>
+            </ol>
+        </nav>
+
+        <div class="text-center mb-5">
+            <h1 data-editable="true" data-field="text">Wordpress Websites</h1>
+        </div>
+
+            <div class="text-center py-5">
+                <i class="fa fa-folder-open fa-3x text-muted mb-3"></i>
+                <p class="text-muted">No projects in this category yet.</p>
+                <a href="../../portfolio.html" class="btn btn-primary">View All Portfolio</a>
+            </div>
+
+        <div class="text-center mt-5">
+            <a href="../../portfolio.html" class="btn btn-outline-secondary">
+                <i class="fa fa-arrow-left me-1"></i>Back to All Portfolio
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .portfolio-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .portfolio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+</style>
+
+            </main>
+        </div>
+    </div>
+
+    
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        <div class="row py-3">
+            <!-- Contact Details -->
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <strong class="d-block mb-2">Max Accountancy</strong>
+                        <small class="d-block text-muted">
+                                    <span>Unit 5, 245 Blenheim Road</span><br />
+                                    <span>Upper Riccarton</span><br />
+                                <span>Christchurch</span>
+                                    <span> 8041</span>
+                                <br />
+                        </small>
+                        <small class="d-block">
+                            <i class="fa fa-phone me-1"></i>
+                            <a href="tel:034211168">03 421 1168</a>
+                        </small>
+                        <small class="d-block">
+                            <i class="fa fa-envelope me-1"></i>
+                            
+                        </small>
+                </div>
+            
+            <!-- Footer Menu -->
+            <div class="col-md-4 mb-3 mb-md-0 text-md-center">
+            </div>
+            
+            <!-- Social Links & Copyright -->
+            <div class="col-md-4 text-md-end">
+                <small class="text-muted">&copy; 2026 Max Accountancy</small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent-banner" id="cookieConsentBanner" style="display: none;"><div class="cookie-consent-content"><div class="cookie-consent-text"><i class="fa fa-cookie-bite me-2"></i>
+            <span>
+                We use cookies to enhance your experience and for authentication purposes. 
+                By continuing to use this site, you agree to our use of cookies.
+                <a href="../../PrivacyPolicy.html" class="cookie-consent-link">Learn more</a></span></div>
+        <div class="cookie-consent-buttons"><button class="btn btn-outline-light btn-sm me-2" onclick="window.cookieConsent.decline()">
+                Decline
+            </button>
+            <button class="btn btn-primary btn-sm" onclick="window.cookieConsent.accept()"><i class="fa fa-check me-1"></i>Accept All
+            </button></div></div></div>
+
+    <!-- SEO Analyzer Panel (only show for authenticated admin users, not static generation, not SuperAdmin pages) -->
+
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Public JS files -->
+    <script src="../../js/public/site.min.js"></script>
+    <script src="../../js/public/slider-shared.min.js"></script>
+    <script src="../../js/public/image-slider.min.js"></script>
+    <!-- Site-specific JS overrides (from SiteSettings.AssetsSubdirectory) -->
+    
+<script src="/js/static-logger.js"></script>
+<script src="/js/public/preview-editor.js" id="preview-editor-script"></script>
+</body>
+</html>
+
