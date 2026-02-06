@@ -76,6 +76,9 @@
     <link rel="stylesheet" href="./css/public/bootstrap.extension.min.css" />
     <link rel="stylesheet" href="./css/public/theme-variables.min.css" />
     <!-- Admin CSS (excluded from static site generation) -->
+        
+        
+        
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     
@@ -86,7 +89,7 @@
     <!-- Site-specific inline custom CSS -->
     
     
-<link rel="stylesheet" href="/css/public/preview-editor.css" id="preview-editor-styles">
+<link rel="stylesheet" href="/css/superadmin/preview-editor.css" id="preview-editor-styles">
 </head>
 <body>
 <header>
@@ -126,24 +129,8 @@
                         <li class="nav-item">
                                 <a class="nav-link text-dark " href="./portfolio.html">Websites</a>
                         </li>
-                        <li class="nav-item dropdown hover-dropdown">
-                                <a class="nav-link dropdown-toggle text-dark " href="./news-feed.html" id="&quot;m-12&quot;" role="button" aria-expanded="false">
-                                    News Feed
-                                </a>
-                            <ul class="dropdown-menu" aria-labelledby="&quot;m-12&quot;">
-                                    <li>
-                                            <a class="dropdown-item" href="./newsfeed.html">All Articles</a>
-                                    </li>
-                                    <li>
-                                            <a class="dropdown-item" href="./newsfeed/category/other-news.html">Other News (0)</a>
-                                    </li>
-                                    <li>
-                                            <a class="dropdown-item" href="./newsfeed/category/payroll.html">Payroll (2)</a>
-                                    </li>
-                                    <li>
-                                            <a class="dropdown-item" href="./newsfeed/category/tax-compliance.html">Tax Compliance (0)</a>
-                                    </li>
-                            </ul>
+                        <li class="nav-item">
+                                <a class="nav-link text-dark " href="./news-feed.html">News Feed</a>
                         </li>
                         <li class="nav-item dropdown hover-dropdown">
                                 <a class="nav-link dropdown-toggle text-dark " href="./about-us.html" id="&quot;m-15&quot;" role="button" aria-expanded="false">
@@ -151,40 +138,24 @@
                                 </a>
                             <ul class="dropdown-menu" aria-labelledby="&quot;m-15&quot;">
                                     <li>
-                                            <a class="dropdown-item" href="./AboutUs.html">Team Members</a>
+                                            <a class="dropdown-item" href="./aboutus.html">Team Members</a>
                                     </li>
                                     <li>
                                             <a class="dropdown-item" href="./team/department/accounting-services.html">Accounting Services (1)</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="./team/department/company-dog.html">Company Dog (0)</a>
+                                            <a class="dropdown-item" href="./team/department/payroll.html">Payroll (1)</a>
                                     </li>
                                     <li>
                                             <a class="dropdown-item" href="./team/department/it-services.html">IT Services (1)</a>
                                     </li>
                                     <li>
-                                            <a class="dropdown-item" href="./team/department/payroll.html">Payroll (1)</a>
+                                            <a class="dropdown-item" href="./team/department/company-dog.html">Company Dog (0)</a>
                                     </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown hover-dropdown">
-                                <a class="nav-link dropdown-toggle text-dark " href="./Gallery.html" id="&quot;9263dfa9-6bb4-415c-bef4-5ed0f53c5070&quot;" role="button" aria-expanded="false">
-                                    Gallery
-                                </a>
-                            <ul class="dropdown-menu" aria-labelledby="&quot;9263dfa9-6bb4-415c-bef4-5ed0f53c5070&quot;">
-                                    <li>
-                                            <a class="dropdown-item" href="./Gallery.html">All Photos</a>
-                                    </li>
-                                    <li>
-                                            <a class="dropdown-item" href="./gallery/category/banner.html">banner (5)</a>
-                                    </li>
-                                    <li>
-                                            <a class="dropdown-item" href="./gallery/category/opening.html">Opening (1)</a>
-                                    </li>
-                                    <li>
-                                            <a class="dropdown-item" href="./gallery/category/xmas-2025.html">Xmas 2025 (17)</a>
-                                    </li>
-                            </ul>
+                        <li class="nav-item">
+                                <a class="nav-link text-dark " href="./gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link text-dark " href="./contact-us.html">Contact Us</a>
@@ -196,14 +167,130 @@
                     <i class="fa fa-calculator me-1"></i>
                     <span class="d-none d-md-inline">Get a Quote</span>
                 </a>
-                    <a class="btn btn-primary btn-sm" href="">Login</a>
+                <!-- Quick Publish Button (visible to SuperAdmins and Clients) -->
+                <a href="./client/publishing/simplepublisher.html" class="btn btn-warning btn-sm me-2" title="Quick Publish Site">
+                    <i class="fa fa-bolt"></i>
+                    <span class="d-none d-lg-inline ms-1">Publish</span>
+                </a>
+                <!-- Help/Documentation Button (visible to admins) -->
+                <a href="./documentation.html" class="btn btn-outline-info btn-sm me-2" title="View Documentation">
+                    <i class="fa fa-question-circle"></i>
+                    <span class="d-none d-lg-inline ms-1">Help</span>
+                </a>
+                        
+<div class="btn-group me-2">
+    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-cogs me-1"></i>My Site
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end admin-mega-menu">
+        <!-- Dashboard Link -->
+        <li>
+            <a class="dropdown-item fw-bold text-primary" href="./admin/administrator.html">
+                <i class="fa fa-tachometer-alt me-2"></i>Dashboard
+            </a>
+        </li>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- SITE CONTENT (All users) -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <li><hr class="dropdown-divider" /></li>
+        <li class="dropdown-header"><i class="fa fa-file-alt me-1"></i> Site Content</li>
+        <li><a class="dropdown-item" href="./admin/contentwizard/contentwizard.html"><i class="fa fa-magic me-2 text-indigo"></i>Content Wizard</a></li>
+        <li><a class="dropdown-item" href="./admin/site-content/page-headers.html"><i class="fa fa-file-alt me-2 text-purple"></i>Pages</a></li>
+        <li><a class="dropdown-item" href="./admin/site-content/menus.html"><i class="fa fa-bars me-2 text-purple"></i>Menus</a></li>
+        <li><a class="dropdown-item" href="./admin/groups.html"><i class="fa fa-layer-group me-2 text-purple"></i>Groups</a></li>
+        <li><a class="dropdown-item" href="./services/manage.html"><i class="fa fa-briefcase me-2 text-success"></i>Services</a></li>
+        <li><a class="dropdown-item" href="./articles/manage.html"><i class="fa fa-newspaper me-2 text-info"></i>Articles</a></li>
+        <li><a class="dropdown-item" href="./team-members.html"><i class="fa fa-user-tie me-2 text-indigo"></i>Team Members</a></li>
+        <li><a class="dropdown-item" href="./admin/site-content/page-content/by-header.html"><i class="fa fa-star me-2 text-teal"></i>Features</a></li>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- MEDIA & DESIGN (All users) -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <li><hr class="dropdown-divider" /></li>
+        <li class="dropdown-header"><i class="fa fa-palette me-1"></i> Media & Design</li>
+        <li><a class="dropdown-item" href="./admin/site-content/media.html"><i class="fa fa-folder-open me-2 text-secondary"></i>Media Library</a></li>
+        <li><a class="dropdown-item" href="./gallery/manage.html"><i class="fa fa-images me-2 text-purple"></i>Gallery</a></li>
+        <li><a class="dropdown-item" href="./admin/settings/csseditor.html"><i class="fa fa-palette me-2 text-purple"></i>Theme & CSS</a></li>
+
+
+
+            <!-- ═══════════════════════════════════════════════════════ -->
+            <!-- SITE OPERATIONS (SuperAdmin) -->
+            <!-- ═══════════════════════════════════════════════════════ -->
+            <li><hr class="dropdown-divider" /></li>
+            <li class="dropdown-header"><i class="fa fa-globe me-1"></i> Site Operations</li>
+            <li><a class="dropdown-item" href="./sitemanager.html"><i class="fa fa-sitemap me-2 text-indigo"></i>Site Manager</a></li>
+            <li><a class="dropdown-item" href="./contentinspector.html"><i class="fa fa-search-plus me-2 text-info"></i>Content Inspector</a></li>
+            <li><a class="dropdown-item" href="./sitepublisher.html"><i class="fa fa-rocket me-2 text-success"></i>Site Publisher</a></li>
+            <li><a class="dropdown-item" href="./client/publishing/simplepublisher.html"><i class="fa fa-bolt me-2 text-warning"></i>Quick Publish</a></li>
+            <li><a class="dropdown-item text-danger" href="./admin/database.html"><i class="fa fa-database me-2"></i>Database Browser</a></li>
+            <!-- ═══════════════════════════════════════════════════════ -->
+            <!-- DEVELOPMENT TOOLS (SuperAdmin) -->
+            <!-- ═══════════════════════════════════════════════════════ -->
+            <li><hr class="dropdown-divider" /></li>
+            <li class="dropdown-header"><i class="fa fa-flask me-1"></i> Development Tools</li>
+            <li><a class="dropdown-item" href="./datamigration.html"><i class="fa fa-exchange-alt me-2 text-warning"></i>Data Migration</a></li>
+            <li><a class="dropdown-item" href="http://localhost:5050" target="_blank"><i class="fa fa-vial me-2 text-purple"></i>Mock Test Runner <i class="fa fa-external-link-alt ms-1 small text-muted"></i></a></li>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- SETTINGS & CONFIGURATION -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <li><hr class="dropdown-divider" /></li>
+        <li class="dropdown-header"><i class="fa fa-cog me-1"></i> Settings</li>
+        <li><a class="dropdown-item" href="./admin/settings/general.html"><i class="fa fa-sliders-h me-2 text-secondary"></i>General</a></li>
+        <li><a class="dropdown-item" href="./admin/settings/contactinfo.html"><i class="fa fa-address-card me-2 text-secondary"></i>Contact Info</a></li>
+            <li><a class="dropdown-item" href="./ftpsettings.html"><i class="fa fa-server me-2 text-secondary"></i>FTP Settings</a></li>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- AI & CONTENT TOOLS -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <li><hr class="dropdown-divider" /></li>
+        <li class="dropdown-header"><i class="fa fa-brain me-1"></i> AI Tools</li>
+        <li><a class="dropdown-item" href=""><i class="fa fa-magic me-2 text-warning"></i>Content Analysis</a></li>
+        <li><a class="dropdown-item" href=""><i class="fa fa-chart-line me-2 text-info"></i>Usage History</a></li>
+        <li><a class="dropdown-item" href=""><i class="fa fa-file-invoice-dollar me-2 text-success"></i>View Invoices</a></li>
+            <li><hr class="dropdown-divider opacity-50" /></li>
+            <li><a class="dropdown-item" href="./superadmin/ai.html"><i class="fa fa-cogs me-2 text-purple"></i>AI Management</a></li>
+            <li><a class="dropdown-item" href="./superadmin/ai/settings.html"><i class="fa fa-sliders-h me-2 text-purple"></i>AI Configuration</a></li>
+            <li><a class="dropdown-item" href="./superadmin/ai/billing.html"><i class="fa fa-money-bill-wave me-2 text-purple"></i>Billing Management</a></li>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- DOCUMENTATION -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="./documentation.html"><i class="fa fa-book me-2 text-info"></i>Documentation</a></li>
+    </ul>
+</div>
+                    <!-- User Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user-circle me-1" aria-hidden="true"></i>dev-superadmin
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="">
+                                    <i class="fa fa-tachometer-alt me-2 text-primary"></i>Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./account/profile.html">
+                                    <i class="fa fa-user me-2 text-secondary"></i>My Profile
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                
+                            </li>
+                        </ul>
+                    </div>
             </div>
         </div>
     </div>
 </nav>
 
     <div class="banner">
-        <div class="image-slider-container" data-slider-id="slider-288053de" data-transition-effect="fade"><div class="image-display"><img src="./images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" class="slider-image" data-index="0" / data-editable="true" data-field="image" data-image-src="./images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg">
+        <div class="image-slider-container" data-slider-id="slider-e9c705f7" data-transition-effect="fade"><div class="image-display"><img src="./images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" class="slider-image" data-index="0" / data-editable="true" data-field="image" data-image-src="./images/Gallery/banner/eaea095a4482410da28b2fd284f948d8.jpg">
             
             <div class="slider-overlay"><div class="slider-header"><h1 class="slider-title" data-editable="true" data-field="text">Max Accountancy Ltd</h1>
                     <h2 class="slider-subtitle" data-editable="true" data-field="text">GST - PAYROLL - TAX RETURNS</h2></div>
@@ -216,6 +303,222 @@
 </header>
 
     <!-- Admin Sidebar Navigation (show for Clients and Admins) -->
+        
+<!-- Admin Sidebar Toggle Button (visible when collapsed) -->
+<button class="admin-sidebar-toggle" id="adminSidebarToggle" title="Open Admin Menu">
+    <i class="fa fa-bars"></i>
+</button>
+
+<!-- Admin Sidebar Overlay (for mobile) -->
+<div class="admin-sidebar-overlay" id="adminSidebarOverlay"></div>
+
+<!-- Admin Sidebar -->
+<aside class="admin-sidebar" id="adminSidebar">
+    <div class="admin-sidebar-header">
+        <a class="admin-sidebar-brand" href="./admin/administrator.html">
+            <i class="fa fa-tachometer-alt"></i>
+            <span>My Site</span>
+        </a>
+        <button class="admin-sidebar-close" id="adminSidebarClose" title="Close Menu">
+            <i class="fa fa-times"></i>
+        </button>
+    </div>
+
+    <nav class="admin-sidebar-nav">
+        <!-- ??????????????????????????????????????????????????????? -->
+        <!-- SITE CONTENT (All users) -->
+        <!-- ??????????????????????????????????????????????????????? -->
+        <div class="admin-sidebar-section">
+            <button class="admin-sidebar-section-toggle" data-section="site-content">
+                <i class="fa fa-file-alt section-icon"></i>
+                <span>Site Content</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+            </button>
+            <ul class="admin-sidebar-menu" id="section-site-content">
+                <li><a class="" href="./admin/contentwizard/contentwizard.html"><i class="fa fa-magic text-indigo"></i>Content Wizard</a></li>
+                <li><a class="" href="./admin/site-content/page-headers.html"><i class="fa fa-file-alt text-purple"></i>Pages</a></li>
+                <li><a class="" href="./admin/site-content/menus.html"><i class="fa fa-bars text-purple"></i>Menus</a></li>
+                <li><a class="" href="./admin/groups.html"><i class="fa fa-layer-group text-purple"></i>Groups</a></li>
+                <li><a class="" href="./services/manage.html"><i class="fa fa-briefcase text-success"></i>Services</a></li>
+                <li><a class="" href="./articles/manage.html"><i class="fa fa-newspaper text-info"></i>Articles</a></li>
+                <li><a class="" href="./team-members.html"><i class="fa fa-user-tie text-indigo"></i>Team Members</a></li>
+                <li><a class="" href="./admin/site-content/page-content/by-header.html"><i class="fa fa-star text-teal"></i>Features</a></li>
+                <li><a class="" href="./portfolio/manage.html"><i class="fa fa-th-large text-teal"></i>Portfolio</a></li>
+                <li><a class="" href=""><i class="fa fa-dollar-sign text-warning"></i>Pricing</a></li>
+            </ul>
+        </div>
+
+        <!-- ??????????????????????????????????????????????????????? -->
+        <!-- MEDIA & DESIGN (All users) -->
+        <!-- ??????????????????????????????????????????????????????? -->
+        <div class="admin-sidebar-section">
+            <button class="admin-sidebar-section-toggle" data-section="media-design">
+                <i class="fa fa-palette section-icon"></i>
+                <span>Media & Design</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+            </button>
+            <ul class="admin-sidebar-menu" id="section-media-design">
+                <li><a class="" href="./admin/site-content/media.html"><i class="fa fa-folder-open text-secondary"></i>Media Library</a></li>
+                <li><a class="" href="./gallery/manage.html"><i class="fa fa-images text-purple"></i>Gallery</a></li>
+                <li><a class="" href="./admin/settings/csseditor.html"><i class="fa fa-palette text-purple"></i>Theme & CSS</a></li>
+            </ul>
+        </div>
+
+
+
+        <!-- ??????????????????????????????????????????????????????? -->
+        <!-- SITE OPERATIONS (SuperAdmin) -->
+        <!-- ??????????????????????????????????????????????????????? -->
+        <div class="admin-sidebar-section">
+            <button class="admin-sidebar-section-toggle" data-section="site-operations">
+                <i class="fa fa-globe section-icon"></i>
+                <span>Site Operations</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+            </button>
+            <ul class="admin-sidebar-menu" id="section-site-operations">
+                <li><a href="./sitemanager.html" class=""><i class="fa fa-sitemap text-indigo"></i>Site Manager</a></li>
+                <li><a href="./contentinspector.html" class=""><i class="fa fa-search-plus text-info"></i>Content Inspector</a></li>
+                <li><a href="./sitepublisher.html" class=""><i class="fa fa-rocket text-success"></i>Site Publisher</a></li>
+                <li><a href="./sitepublisher.html"><i class="fa fa-bolt text-warning"></i>Quick Publish</a></li>
+                <li><a class="text-danger " href="./admin/database.html"><i class="fa fa-database"></i>Database Browser</a></li>
+            </ul>
+        </div>
+        <!-- ??????????????????????????????????????????????????????? -->
+        <!-- DEVELOPMENT TOOLS (SuperAdmin) -->
+        <!-- ??????????????????????????????????????????????????????? -->
+        <div class="admin-sidebar-section">
+            <button class="admin-sidebar-section-toggle" data-section="dev-tools">
+                <i class="fa fa-flask section-icon"></i>
+                <span>Development Tools</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+            </button>
+            <ul class="admin-sidebar-menu" id="section-dev-tools">
+                <li><a href="./datamigration.html" class=""><i class="fa fa-exchange-alt text-warning"></i>Data Migration</a></li>
+                <li><a href="http://localhost:5050" target="_blank"><i class="fa fa-vial text-purple"></i>Mock Test Runner <i class="fa fa-external-link-alt ms-1 small text-muted"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- ??????????????????????????????????????????????????????? -->
+        <!-- SETTINGS -->
+        <!-- ??????????????????????????????????????????????????????? -->
+        <div class="admin-sidebar-section">
+            <button class="admin-sidebar-section-toggle" data-section="settings">
+                <i class="fa fa-cog section-icon"></i>
+                <span>Settings</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+            </button>
+            <ul class="admin-sidebar-menu" id="section-settings">
+                <li><a class="" href="./admin/settings/general.html"><i class="fa fa-sliders-h text-secondary"></i>General</a></li>
+                <li><a class="" href="./admin/settings/contactinfo.html"><i class="fa fa-address-card text-secondary"></i>Contact Info</a></li>
+                <li><a href="./ftpsettings.html" class=""><i class="fa fa-server text-secondary"></i>FTP Settings</a></li>
+                <li><a href="./deploymentsettings.html" class=""><i class="fa fa-cloud-upload-alt text-secondary"></i>Deployment Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- ??????????????????????????????????????????????????????? -->
+        <!-- DOCUMENTATION -->
+        <!-- ??????????????????????????????????????????????????????? -->
+        <div class="admin-sidebar-section">
+            <a class="admin-sidebar-single-link " href="./documentation.html">
+                <i class="fa fa-book section-icon text-info"></i>
+                <span>Documentation</span>
+            </a>
+        </div>
+    </nav>
+</aside>
+
+<script>
+(function() {
+    const sidebar = document.getElementById('adminSidebar');
+    const toggleBtn = document.getElementById('adminSidebarToggle');
+    const closeBtn = document.getElementById('adminSidebarClose');
+    const overlay = document.getElementById('adminSidebarOverlay');
+    const STORAGE_KEY = 'adminSidebarState';
+    const SECTIONS_KEY = 'adminSidebarSections';
+
+    // Load saved state
+    function loadState() {
+        const savedState = localStorage.getItem(STORAGE_KEY);
+        // Default to expanded (not collapsed) if no saved state
+        if (savedState === 'collapsed') {
+            sidebar.classList.add('collapsed');
+            document.body.classList.add('admin-sidebar-collapsed');
+        } else {
+            // Ensure sidebar is visible by default
+            sidebar.classList.remove('collapsed');
+            document.body.classList.remove('admin-sidebar-collapsed');
+        }
+
+        // Load section states
+        const savedSections = JSON.parse(localStorage.getItem(SECTIONS_KEY) || '{}');
+        document.querySelectorAll('.admin-sidebar-section-toggle').forEach(btn => {
+            const section = btn.dataset.section;
+            const menu = document.getElementById('section-' + section);
+            if (menu) {
+                if (savedSections[section] === false) {
+                    btn.classList.add('collapsed');
+                    menu.classList.add('collapsed');
+                } else {
+                    btn.classList.remove('collapsed');
+                    menu.classList.remove('collapsed');
+                }
+            }
+        });
+    }
+
+    // Toggle sidebar
+    function toggleSidebar() {
+        const isCollapsed = sidebar.classList.toggle('collapsed');
+        document.body.classList.toggle('admin-sidebar-collapsed', isCollapsed);
+        overlay.classList.toggle('active', !isCollapsed && window.innerWidth < 1200);
+        localStorage.setItem(STORAGE_KEY, isCollapsed ? 'collapsed' : 'expanded');
+    }
+
+    // Close sidebar (mobile)
+    function closeSidebar() {
+        sidebar.classList.add('collapsed');
+        document.body.classList.add('admin-sidebar-collapsed');
+        overlay.classList.remove('active');
+        localStorage.setItem(STORAGE_KEY, 'collapsed');
+    }
+
+    // Toggle section
+    function toggleSection(btn) {
+        const section = btn.dataset.section;
+        const menu = document.getElementById('section-' + section);
+        if (menu) {
+            const isCollapsed = btn.classList.toggle('collapsed');
+            menu.classList.toggle('collapsed', isCollapsed);
+
+            // Save state
+            const savedSections = JSON.parse(localStorage.getItem(SECTIONS_KEY) || '{}');
+            savedSections[section] = !isCollapsed;
+            localStorage.setItem(SECTIONS_KEY, JSON.stringify(savedSections));
+        }
+    }
+
+    // Event listeners
+    if (toggleBtn) toggleBtn.addEventListener('click', toggleSidebar);
+    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+    if (overlay) overlay.addEventListener('click', closeSidebar);
+
+    // Section toggles
+    document.querySelectorAll('.admin-sidebar-section-toggle').forEach(btn => {
+        btn.addEventListener('click', () => toggleSection(btn));
+    });
+
+    // Initialize
+    loadState();
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1200) {
+            overlay.classList.remove('active');
+        }
+    });
+})();
+</script>
+
 
     <div class="page-wrapper">
         <div class="container-fluid px-0">
@@ -226,12 +529,17 @@
         <!-- HERO: About Us - Large featured card (always shown) -->
         <article class="dashboard-card card-hero accent-teal" data-section-wrapper>
             <div class="dashboard-card-content">
-                <div class="page-content-display"><h2 class="page-content-header" data-editable="true" data-field="text">About Us</h2><div class="row"><div class="col-md-4 mb-3 mb-md-0"><div class="page-content-images"><div id="contentCarousel-cc023f5f" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"><div class="carousel-inner"><div class="carousel-item active"><img src="./images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Jenny and Kate" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Craig and Andre" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Craig and Andre" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg" class="d-block w-100 rounded" alt="line_oa_chat_251217_104710" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg" class="d-block w-100 rounded" alt="line_oa_chat_251217_104710" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg" class="d-block w-100 rounded" alt="bf7e47df-e1c0-4fca-99d4-6896c13b786c" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg" class="d-block w-100 rounded" alt="bf7e47df-e1c0-4fca-99d4-6896c13b786c" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg"></div></div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <div class="page-content-display"><div class="admin-toolbar mb-3 p-2 bg-light border rounded d-flex gap-2"><a class="btn btn-sm btn-outline-primary" href="./admin/site-content/page-content/edit/6950f691265a860220aa72a5.html"><i class="fa fa-edit me-1"></i>Edit
+                </a>
+                <a class="btn btn-sm btn-outline-info" href="./admin/entity-images.html"><i class="fa fa-images me-1"></i>Manage Media
+                </a>
+                <a class="btn btn-sm btn-outline-danger" href="./admin/site-content/page-content.html"><i class="fa fa-cog me-1"></i>Manage Content
+                </a></div><h2 class="page-content-header" data-editable="true" data-field="text">About Us</h2><div class="row"><div class="col-md-4 mb-3 mb-md-0"><div class="page-content-images"><div id="contentCarousel-229e3f3e" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"><div class="carousel-inner"><div class="carousel-item active"><img src="./images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Jenny and Kate" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Craig and Andre" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Craig and Andre" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/5c2243e9b9a8451b96177d2d46ed908a.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg" class="d-block w-100 rounded" alt="Christmas celebration photos -Jenny, Jaiselle and Manju" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/7c7dfcfee3ca4c7f8f50ef34fd61e054.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg" class="d-block w-100 rounded" alt="line_oa_chat_251217_104710" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg" class="d-block w-100 rounded" alt="line_oa_chat_251217_104710" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/962cdbfcb8744e02840c10e978fa16f4.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg" class="d-block w-100 rounded" alt="bf7e47df-e1c0-4fca-99d4-6896c13b786c" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg"></div><div class="carousel-item "><img src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg" class="d-block w-100 rounded" alt="bf7e47df-e1c0-4fca-99d4-6896c13b786c" style="object-fit: cover;" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/f6a09d2bb01349fd8cef28273a3a68b7.jpg"></div></div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span></button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <button class="carousel-control-next" type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span></button>
-                                <div class="carousel-indicators" style="position: relative; margin-top: 0.5rem;"><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="1" class="" aria-current="false" aria-label="Slide 2" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="2" class="" aria-current="false" aria-label="Slide 3" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="3" class="" aria-current="false" aria-label="Slide 4" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="4" class="" aria-current="false" aria-label="Slide 5" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="5" class="" aria-current="false" aria-label="Slide 6" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="6" class="" aria-current="false" aria-label="Slide 7" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="7" class="" aria-current="false" aria-label="Slide 8" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-cc023f5f" data-bs-slide-to="8" class="" aria-current="false" aria-label="Slide 9" style="background-color: #333;"></button></div></div></div></div><div class="col-md-8"><p class="lead page-content-short-details" data-editable="true" data-field="text">Christchurch-based accounting and business services.</p><div class="page-content-details"><p>Max Accountancy was founded by Craig and Jenny - two professionals from different backgrounds who share a belief in each other&#x27;s skills and a passion for enabling businesses to succeed. Based in Christchurch, New Zealand, we pride ourselves on delivering clear, practical advice and personalised customer service, all at affordable prices.</p><p>We believe the foundation of a successful business is having robust systems and processes in place, enabling efficiency and reliability. This is what makes a business competitive. With over 20 years&#x27; experience in accounting, ERP systems, and business process improvement, we help our clients not only meet compliance requirements but can also streamline operations, improve efficiency, and plan for growth.</p><p>Accounting is not just about your Tax obligations and compliance requirements, we here at Max Accounting understand that. We aim to help your business succeed by providing timely and useful financial advice and tax planning alongside the assisting in the activation of operation systems to help with business processes such as client and stock management.</p><p>Max Accounting offers more than just accounting. We can assist with a variety of touchpoints for your business from Web Design, set up and support of your Accounting Systems (MYOB, XERO, etc.) as well as traditional Tax Filing and Financial advice. We&#x27;re your partner in building a stronger, more sustainable business.</p></div></div></div></div><style>
+                                <div class="carousel-indicators" style="position: relative; margin-top: 0.5rem;"><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="1" class="" aria-current="false" aria-label="Slide 2" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="2" class="" aria-current="false" aria-label="Slide 3" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="3" class="" aria-current="false" aria-label="Slide 4" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="4" class="" aria-current="false" aria-label="Slide 5" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="5" class="" aria-current="false" aria-label="Slide 6" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="6" class="" aria-current="false" aria-label="Slide 7" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="7" class="" aria-current="false" aria-label="Slide 8" style="background-color: #333;"></button><button type="button" data-bs-target="#contentCarousel-229e3f3e" data-bs-slide-to="8" class="" aria-current="false" aria-label="Slide 9" style="background-color: #333;"></button></div></div></div></div><div class="col-md-8"><p class="lead page-content-short-details" data-editable="true" data-field="text">Christchurch-based accounting and business services.</p><div class="page-content-details"><p>Max Accountancy was founded by Craig and Jenny - two professionals from different backgrounds who share a belief in each other&#x27;s skills and a passion for enabling businesses to succeed. Based in Christchurch, New Zealand, we pride ourselves on delivering clear, practical advice and personalised customer service, all at affordable prices.</p><p>We believe the foundation of a successful business is having robust systems and processes in place, enabling efficiency and reliability. This is what makes a business competitive. With over 20 years&#x27; experience in accounting, ERP systems, and business process improvement, we help our clients not only meet compliance requirements but can also streamline operations, improve efficiency, and plan for growth.</p><p>Accounting is not just about your Tax obligations and compliance requirements, we here at Max Accounting understand that. We aim to help your business succeed by providing timely and useful financial advice and tax planning alongside the assisting in the activation of operation systems to help with business processes such as client and stock management.</p><p>Max Accounting offers more than just accounting. We can assist with a variety of touchpoints for your business from Web Design, set up and support of your Accounting Systems (MYOB, XERO, etc.) as well as traditional Tax Filing and Financial advice. We&#x27;re your partner in building a stronger, more sustainable business.</p></div></div></div></div><style>
     .page-content-display .page-content-images {
         max-width: 100%;
     }
@@ -316,7 +624,7 @@
                     <div class="services-slider-container"><div class="services-slider-groups"><button class="slider-group-pill active" data-group onclick="filterSliderGroup(this, '')">
                     All
                 </button><button class="slider-group-pill" data-group="gst-and-payroll" onclick="filterSliderGroup(this, &#x27;gst-and-payroll&#x27;)"><i class="fa fa-briefcase me-1"></i>gst-and-payroll</button><button class="slider-group-pill" data-group="income-tax" onclick="filterSliderGroup(this, &#x27;income-tax&#x27;)"><i class="fa fa-briefcase me-1"></i>income-tax</button><button class="slider-group-pill" data-group="other-services" onclick="filterSliderGroup(this, &#x27;other-services&#x27;)"><i class="fa fa-briefcase me-1"></i>other-services</button></div><div class="services-slider" id="services-slider"><button class="slider-nav slider-nav-prev" onclick="scrollServicesSlider(-1)" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
-            <div class="services-slider-track"><div class="service-slide" data-group="other-services"><a href="./services/Company%20Registration.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/MaxAccountancy/Services/Company Registration/37fd87acfe364c2eaeacb28e236028f9.png" alt="Company Registration Services" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Services/Company Registration/37fd87acfe364c2eaeacb28e236028f9.png"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Company Registration Services</h5><span class="badge bg-info service-slide-price">$290 one-off</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/Company%20Returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/MaxAccountancy/Services/Company Returns/0f8d55fd403e4be688e58afc46918533.jpg" alt="Company Tax Returns" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Services/Company Returns/0f8d55fd403e4be688e58afc46918533.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Company Tax Returns</h5><span class="badge bg-info service-slide-price">From $390 per year</span></div></a></div><div class="service-slide" data-group="gst-and-payroll"><a href="./services/GST.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/GST/405e7a10569b43aba068f80d8ad60f5d.jpg" alt="GST Filing" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/GST/405e7a10569b43aba068f80d8ad60f5d.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">GST Filing</h5><span class="badge bg-info service-slide-price">From $58 per month</span></div></a></div><div class="service-slide" data-group="gst-and-payroll"><a href="./services/GST%20and%20Payroll%20Combo.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/MaxAccountancy/Services/GST and Payroll Combo/8c5e6a4757ea459eb948fb3f6ebf9ced.jpg" alt="GST &amp; Payroll Combo" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Services/GST and Payroll Combo/8c5e6a4757ea459eb948fb3f6ebf9ced.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">GST &amp; Payroll Combo</h5><span class="badge bg-info service-slide-price">From $100 per month</span></div></a></div><div class="service-slide" data-group="gst-and-payroll"><a href="./services/Payroll.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/Payroll/bbefc3602f4f47e6bafe1cfb9b668e5b.jpg" alt="Fixed Fee Payroll Services" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/Payroll/bbefc3602f4f47e6bafe1cfb9b668e5b.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Fixed Fee Payroll Services</h5><span class="badge bg-info service-slide-price">From $60 per month</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/83da1a1ac4d24b2cbc0b4f4d362afd2e.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/MaxAccountancy/Services/83da1a1ac4d24b2cbc0b4f4d362afd2e/d7433b4d99494edf9a73f3f73776cddb.jpg" alt="Personal Tax Returns" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Services/83da1a1ac4d24b2cbc0b4f4d362afd2e/d7433b4d99494edf9a73f3f73776cddb.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Personal Tax Returns</h5><span class="badge bg-info service-slide-price">From $68 per return</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/Property%20Returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/MaxAccountancy/Services/Property Returns/ee90c1944c354087bc06fa2835b5eb12.jpg" alt="Property Tax Returns" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Services/Property Returns/ee90c1944c354087bc06fa2835b5eb12.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Property Tax Returns</h5><span class="badge bg-info service-slide-price">From $210 per year</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/Sole%20Trader%20Returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/MaxAccountancy/Services/Sole Trader Returns/574cf6d4a2e2405bba5212787bb54223.jpg" alt="Sole Trader Income Tax" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Services/Sole Trader Returns/574cf6d4a2e2405bba5212787bb54223.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Sole Trader Income Tax</h5><span class="badge bg-info service-slide-price">From $190 per year</span></div></a></div></div>
+            <div class="services-slider-track"><div class="service-slide" data-group="other-services"><a href="./services/Company%20Registration.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/Company Registration/37fd87acfe364c2eaeacb28e236028f9.png" alt="Company Registration Services" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/Company Registration/37fd87acfe364c2eaeacb28e236028f9.png"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Company Registration Services</h5><span class="badge bg-info service-slide-price">$290 one-off</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/Company%20Returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/Company Returns/0f8d55fd403e4be688e58afc46918533.jpg" alt="Company Tax Returns" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/Company Returns/0f8d55fd403e4be688e58afc46918533.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Company Tax Returns</h5><span class="badge bg-info service-slide-price">From $390 per year</span></div></a></div><div class="service-slide" data-group="gst-and-payroll"><a href="./services/GST.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/GST/405e7a10569b43aba068f80d8ad60f5d.jpg" alt="GST Filing" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/GST/405e7a10569b43aba068f80d8ad60f5d.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">GST Filing</h5><span class="badge bg-info service-slide-price">From $58 per month</span></div></a></div><div class="service-slide" data-group="gst-and-payroll"><a href="./services/GST%20and%20Payroll%20Combo.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/GST and Payroll Combo/8c5e6a4757ea459eb948fb3f6ebf9ced.jpg" alt="GST &amp; Payroll Combo" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/GST and Payroll Combo/8c5e6a4757ea459eb948fb3f6ebf9ced.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">GST &amp; Payroll Combo</h5><span class="badge bg-info service-slide-price">From $100 per month</span></div></a></div><div class="service-slide" data-group="gst-and-payroll"><a href="./services/Payroll.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/Payroll/bbefc3602f4f47e6bafe1cfb9b668e5b.jpg" alt="Fixed Fee Payroll Services" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/Payroll/bbefc3602f4f47e6bafe1cfb9b668e5b.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Fixed Fee Payroll Services</h5><span class="badge bg-info service-slide-price">From $60 per month</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/personal-tax-returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/83da1a1ac4d24b2cbc0b4f4d362afd2e/d7433b4d99494edf9a73f3f73776cddb.jpg" alt="Personal Tax Returns" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/83da1a1ac4d24b2cbc0b4f4d362afd2e/d7433b4d99494edf9a73f3f73776cddb.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Personal Tax Returns</h5><span class="badge bg-info service-slide-price">From $68 per return</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/Property%20Returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/Property Returns/ee90c1944c354087bc06fa2835b5eb12.jpg" alt="Property Tax Returns" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/Property Returns/ee90c1944c354087bc06fa2835b5eb12.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Property Tax Returns</h5><span class="badge bg-info service-slide-price">From $210 per year</span></div></a></div><div class="service-slide" data-group="income-tax"><a href="./services/Sole%20Trader%20Returns.html" class="service-slide-link"><div class="service-slide-image"><img src="./images/Services/Sole Trader Returns/574cf6d4a2e2405bba5212787bb54223.jpg" alt="Sole Trader Income Tax" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Services/Sole Trader Returns/574cf6d4a2e2405bba5212787bb54223.jpg"></div><div class="service-slide-content"><h5 class="service-slide-title" data-editable="true" data-field="text">Sole Trader Income Tax</h5><span class="badge bg-info service-slide-price">From $190 per year</span></div></a></div></div>
             <button class="slider-nav slider-nav-next" onclick="scrollServicesSlider(1)" aria-label="Next"><i class="fa fa-chevron-right"></i></button></div><div class="text-center mt-3"><a href="./services.html" class="btn btn-outline-primary">
                     View All Services <i class="fa fa-arrow-right ms-1"></i></a></div></div><style>
     .services-slider-container {
@@ -593,9 +901,11 @@
                     <span class="card-badge">Updates</span>
                 </div>
                 <div class="dashboard-card-content">
-                    <div class="newsfeed-slider-container"><div class="slider-group-label"><i class="fa fa-newspaper me-1"></i>payroll</div><div class="newsfeed-slider" id="newsfeed-slider"><button class="slider-nav slider-nav-prev" onclick="scrollNewsFeedSlider(-1)" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
-                <div class="newsfeed-slider-track"><div class="article-slide" data-group="payroll"><a href="./newsfeed/3efd0f355c7343588f23c35acb7219b0.html" class="article-slide-link"><div class="article-slide-image article-slide-placeholder"><i class="fa fa-newspaper"></i></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Payroll Trends &amp; Compliance Updates for New Zealand Businesses in 2026</h5><span class="article-slide-date">22 Jan 2026</span></div></a></div><div class="article-slide" data-group="payroll"><a href="./newsfeed/3d321819810646b0bfc25d9cb74c6f77.html" class="article-slide-link"><div class="article-slide-image article-slide-placeholder"><i class="fa fa-newspaper"></i></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Payroll Essentials Every NZ Business Owner Should Understand</h5><span class="article-slide-date">29 Jan 2026</span></div></a></div></div>
-                <button class="slider-nav slider-nav-next" onclick="scrollNewsFeedSlider(1)" aria-label="Next"><i class="fa fa-chevron-right"></i></button></div><div class="text-center mt-3"><a href="./newsfeed.html" class="btn btn-outline-primary">
+                    <div class="newsfeed-slider-container"><div class="newsfeed-slider-groups slider-groups slider-groups--newsfeed"><button class="slider-group-pill active" data-group onclick="filterNewsFeedSliderGroup(this, '')">
+                        All
+                    </button><button class="slider-group-pill" data-group="Other News" onclick="filterNewsFeedSliderGroup(this, &#x27;Other News&#x27;)"><i class="fa fa-newspaper me-1"></i>Other News</button><button class="slider-group-pill" data-group="Payroll" onclick="filterNewsFeedSliderGroup(this, &#x27;Payroll&#x27;)"><i class="fa fa-newspaper me-1"></i>Payroll</button><button class="slider-group-pill" data-group="Tax Compliance" onclick="filterNewsFeedSliderGroup(this, &#x27;Tax Compliance&#x27;)"><i class="fa fa-newspaper me-1"></i>Tax Compliance</button></div><div class="newsfeed-slider" id="newsfeed-slider"><button class="slider-nav slider-nav-prev" onclick="scrollNewsFeedSlider(-1)" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+                <div class="newsfeed-slider-track"><div class="article-slide" data-group="Payroll"><a href="./newsfeed/payroll-essentials-every-nz-business-owner-should-understand.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/3d321819810646b0bfc25d9cb74c6f77/e887e120f00c4e2ab17a1f75344ff4d0.png" alt="Payroll Essentials Every NZ Business Owner Should Understand" / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/3d321819810646b0bfc25d9cb74c6f77/e887e120f00c4e2ab17a1f75344ff4d0.png"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Payroll Essentials Every NZ Business Owner Should Understand</h5><span class="article-slide-date">29 Jan 2026</span></div></a></div><div class="article-slide" data-group="Other News"><a href="./newsfeed/new-signs-from-mysign.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/873b1023c46e4653b4f1176a65b523f3/bee348c795324aa3aec481e19a34d3ac.jpg" alt="New Signs from MySign" / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/873b1023c46e4653b4f1176a65b523f3/bee348c795324aa3aec481e19a34d3ac.jpg"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">New Signs from MySign</h5></div></a></div><div class="article-slide" data-group="Tax Compliance"><a href="./newsfeed/gst-compliance-rules.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/1f8fd76d7e3a443f94f6d01878347c4e/809e79b09fd54ad5ba6454ea9c770234.jpg" alt="GST Compliance Rules" / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/1f8fd76d7e3a443f94f6d01878347c4e/809e79b09fd54ad5ba6454ea9c770234.jpg"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">GST Compliance Rules</h5></div></a></div><div class="article-slide" data-group="Tax Compliance"><a href="./newsfeed/residential-rental-property-deductions.html" class="article-slide-link"><div class="article-slide-image article-slide-placeholder"><i class="fa fa-newspaper"></i></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Residential rental property deductions</h5></div></a></div><div class="article-slide" data-group="Payroll"><a href="./newsfeed/payroll-made-easy-with-max-accountancy.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/a56454dbf9ea4b2c9743781d29228cf8/13c50994d65447b0939823e371bb2f49.png" alt="Payroll made easy with Max Accountancy." / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/a56454dbf9ea4b2c9743781d29228cf8/13c50994d65447b0939823e371bb2f49.png"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Payroll made easy with Max Accountancy.</h5><span class="article-slide-date">22 Jan 2026</span></div></a></div><div class="article-slide" data-group="Payroll"><a href="./newsfeed/payroll-trends-and-compliance-updates-for-new-zealand-businesses-in-2026.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/3efd0f355c7343588f23c35acb7219b0/f0168a5b6c7748c4b68e9d63e58f6704.png" alt="Payroll Trends &amp; Compliance Updates for New Zealand Businesses in 2026" / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/3efd0f355c7343588f23c35acb7219b0/f0168a5b6c7748c4b68e9d63e58f6704.png"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Payroll Trends &amp; Compliance Updates for New Zealand Businesses in 2026</h5><span class="article-slide-date">22 Jan 2026</span></div></a></div><div class="article-slide" data-group="Tax Compliance"><a href="./newsfeed/keep-your-employees-gifts-below-300.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/803416944f4946bbad3274ad4bf8b47f/356db662681545379a7a7e79d383b641.png" alt="Keep your employees gifts below $300" / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/803416944f4946bbad3274ad4bf8b47f/356db662681545379a7a7e79d383b641.png"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">Keep your employees gifts below $300</h5></div></a></div><div class="article-slide" data-group="Other News"><a href="./newsfeed/we-have-moved.html" class="article-slide-link"><div class="article-slide-image"><img src="./images/NewsFeed/c4e2bba6-40c1-4e91-9e40-ec4ebef01436/8faf941c3d5b452e92b00b4214c62014.png" alt="We have moved" / data-editable="true" data-field="image" data-image-src="./images/NewsFeed/c4e2bba6-40c1-4e91-9e40-ec4ebef01436/8faf941c3d5b452e92b00b4214c62014.png"></div><div class="article-slide-content"><h5 class="article-slide-title" data-editable="true" data-field="text">We have moved</h5></div></a></div></div>
+                <button class="slider-nav slider-nav-next" onclick="scrollNewsFeedSlider(1)" aria-label="Next"><i class="fa fa-chevron-right"></i></button></div><div class="text-center mt-3"><a href="./news-feed.html" class="btn btn-outline-primary">
                         View All Articles <i class="fa fa-arrow-right ms-1"></i></a></div></div><style>
             .newsfeed-slider-container {
                 position: relative;
@@ -869,12 +1179,15 @@
                     <span class="card-badge">Portfolio</span>
                 </div>
                 <div class="dashboard-card-content">
-                    <div class="portfolio-masonry"><div class="portfolio-masonry-item "><a href="./portfolio/d1f5c47c31304b6c8892f03d0a2f33e0.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/MaxAccountancy/Portfolio/d1f5c47c31304b6c8892f03d0a2f33e0/6f97e8b242b4421d8b653753baf0ca62.png" alt="Thai Massage Station" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Portfolio/d1f5c47c31304b6c8892f03d0a2f33e0/6f97e8b242b4421d8b653753baf0ca62.png">
-                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Thai Massage Station</h4><span class="client-name">Thai Massage Station</span></div></div></div></a></div><div class="portfolio-masonry-item "><a href="./portfolio/67f6af2b3cef4bcf9fbcc09d8823d7d2.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/MaxAccountancy/Portfolio/67f6af2b3cef4bcf9fbcc09d8823d7d2/7af6c1542bd648d9969eed5d2f8d2525.png" alt="Beauty and Soul" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Portfolio/67f6af2b3cef4bcf9fbcc09d8823d7d2/7af6c1542bd648d9969eed5d2f8d2525.png">
-                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Beauty and Soul</h4><span class="client-name">Beauty and Soul</span></div></div></div></a></div><div class="portfolio-masonry-item "><a href="./portfolio/190a36c3411d4e228bda759d2d623067.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/MaxAccountancy/Portfolio/190a36c3411d4e228bda759d2d623067/d8e5dba10d7142c9a3085a5a108c6558.png" alt="Chom Thai Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Portfolio/190a36c3411d4e228bda759d2d623067/d8e5dba10d7142c9a3085a5a108c6558.png">
-                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Chom Thai Massage</h4><span class="client-name">Chom Thai Massage</span></div></div></div></a></div><div class="portfolio-masonry-item "><a href="./portfolio/8dccd8963a8b49e9a1596b33d2e83be8.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/MaxAccountancy/Portfolio/8dccd8963a8b49e9a1596b33d2e83be8/a6eb0d546a9b4ced8ee10a65e2dadfdb.png" alt="Thai Dee Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Portfolio/8dccd8963a8b49e9a1596b33d2e83be8/a6eb0d546a9b4ced8ee10a65e2dadfdb.png">
-                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Thai Dee Massage</h4><span class="client-name">Thai Dee Massage</span></div></div></div></a></div><div class="portfolio-masonry-item featured"><a href="./portfolio/174a1bc9231a4bb283151fb602654018.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/MaxAccountancy/Portfolio/174a1bc9231a4bb283151fb602654018/271cea0ef1884a76a79c619a766f2904.png" alt="Tata Thai Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Portfolio/174a1bc9231a4bb283151fb602654018/271cea0ef1884a76a79c619a766f2904.png">
-                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Tata Thai Massage</h4><span class="client-name">Tata Thai Massage</span></div></div></div></a><span class="featured-badge"><i class="fa fa-star"></i></span></div><div class="portfolio-masonry-item "><a href="./portfolio/2e67aa41e197401bae19cd5b91bb0500.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/MaxAccountancy/Portfolio/2e67aa41e197401bae19cd5b91bb0500/be02b12ecc2548b3be2d2d8e22ab63c5.png" alt="Devonport Thai Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Portfolio/2e67aa41e197401bae19cd5b91bb0500/be02b12ecc2548b3be2d2d8e22ab63c5.png">
+                    <div class="d-flex justify-content-between align-items-center mb-3"><div class="d-flex gap-2"><a href="./portfolio/projects/add.html" class="btn btn-primary"><i class="fa fa-plus me-1"></i>Add Project
+                    </a>
+                    <a href="./portfolio/manage.html" class="btn btn-outline-secondary"><i class="fa fa-list me-1"></i>Manage Projects
+                    </a></div></div><div class="portfolio-masonry"><div class="portfolio-masonry-item "><a href="./portfolio/thai-massage-station.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/Portfolio/d1f5c47c31304b6c8892f03d0a2f33e0/6f97e8b242b4421d8b653753baf0ca62.png" alt="Thai Massage Station" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Portfolio/d1f5c47c31304b6c8892f03d0a2f33e0/6f97e8b242b4421d8b653753baf0ca62.png">
+                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Thai Massage Station</h4><span class="client-name">Thai Massage Station</span></div></div></div></a></div><div class="portfolio-masonry-item "><a href="./portfolio/beauty-and-soul.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/Portfolio/67f6af2b3cef4bcf9fbcc09d8823d7d2/7af6c1542bd648d9969eed5d2f8d2525.png" alt="Beauty and Soul" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Portfolio/67f6af2b3cef4bcf9fbcc09d8823d7d2/7af6c1542bd648d9969eed5d2f8d2525.png">
+                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Beauty and Soul</h4><span class="client-name">Beauty and Soul</span></div></div></div></a></div><div class="portfolio-masonry-item "><a href="./portfolio/chom-thai-massage.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/Portfolio/190a36c3411d4e228bda759d2d623067/d8e5dba10d7142c9a3085a5a108c6558.png" alt="Chom Thai Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Portfolio/190a36c3411d4e228bda759d2d623067/d8e5dba10d7142c9a3085a5a108c6558.png">
+                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Chom Thai Massage</h4><span class="client-name">Chom Thai Massage</span></div></div></div></a></div><div class="portfolio-masonry-item "><a href="./portfolio/thai-dee-massage.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/Portfolio/8dccd8963a8b49e9a1596b33d2e83be8/a6eb0d546a9b4ced8ee10a65e2dadfdb.png" alt="Thai Dee Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Portfolio/8dccd8963a8b49e9a1596b33d2e83be8/a6eb0d546a9b4ced8ee10a65e2dadfdb.png">
+                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Thai Dee Massage</h4><span class="client-name">Thai Dee Massage</span></div></div></div></a></div><div class="portfolio-masonry-item featured"><a href="./portfolio/tata-thai-massage.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/Portfolio/174a1bc9231a4bb283151fb602654018/271cea0ef1884a76a79c619a766f2904.png" alt="Tata Thai Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Portfolio/174a1bc9231a4bb283151fb602654018/271cea0ef1884a76a79c619a766f2904.png">
+                                    <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Tata Thai Massage</h4><span class="client-name">Tata Thai Massage</span></div></div></div></a><span class="featured-badge"><i class="fa fa-star"></i></span></div><div class="portfolio-masonry-item "><a href="./portfolio/devonport-thai-massage.html" class="portfolio-item-link"><div class="portfolio-item-image"><img src="./images/Portfolio/2e67aa41e197401bae19cd5b91bb0500/be02b12ecc2548b3be2d2d8e22ab63c5.png" alt="Devonport Thai Massage" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Portfolio/2e67aa41e197401bae19cd5b91bb0500/be02b12ecc2548b3be2d2d8e22ab63c5.png">
                                     <div class="portfolio-item-overlay"><div class="overlay-content"><h4 data-editable="true" data-field="text">Devonport Thai Massage</h4><span class="client-name">Devonport Thai Massage</span></div></div></div></a></div></div><style>
     .portfolio-dashboard {
         display: flex;
@@ -1178,9 +1491,9 @@
                     <div class="team-slider-container"><div class="team-slider-groups slider-groups slider-groups--team"><button class="slider-group-pill active" data-group onclick="filterTeamSliderGroup(this, '')">
                         All
                     </button><button class="slider-group-pill" data-group="team-accounting-services" onclick="filterTeamSliderGroup(this, &#x27;team-accounting-services&#x27;)"><i class="fa fa-users me-1"></i>team-accounting-services</button><button class="slider-group-pill" data-group="team-it-services" onclick="filterTeamSliderGroup(this, &#x27;team-it-services&#x27;)"><i class="fa fa-users me-1"></i>team-it-services</button><button class="slider-group-pill" data-group="team-management" onclick="filterTeamSliderGroup(this, &#x27;team-management&#x27;)"><i class="fa fa-users me-1"></i>team-management</button><button class="slider-group-pill" data-group="team-payroll" onclick="filterTeamSliderGroup(this, &#x27;team-payroll&#x27;)"><i class="fa fa-users me-1"></i>team-payroll</button></div><div class="team-slider" id="team-slider"><button class="slider-nav slider-nav-prev" onclick="scrollTeamSlider(-1)" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
-                <div class="team-slider-track"><div class="team-slide" data-group="team-it-services"><a href="./team/6950f691265a860220aa72b4.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/TeamMembers/6950f691265a860220aa72b4/2d6895ea2aca4e6d847457c3c5333884.jpg" alt="Andre Liswoyo" / data-editable="true" data-field="image" data-image-src="./images/TeamMembers/6950f691265a860220aa72b4/2d6895ea2aca4e6d847457c3c5333884.jpg"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Andre Liswoyo</h5><span class="team-slide-position">Graduate</span></div></a></div><div class="team-slide" data-group="team-management"><a href="./team/6950f691265a860220aa72b0.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/60a6a884e3b740aa965a91141b912700.jpg" alt="Craig Sparks" / data-editable="true" data-field="image" data-image-src="./images/60a6a884e3b740aa965a91141b912700.jpg"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Craig Sparks</h5><span class="team-slide-position">Company Director</span></div></a></div><div class="team-slide" data-group="team-accounting-services"><a href="./team/6950f691265a860220aa72b1.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/13de1b2ef6764fc5bc4c58872c53feff.png" alt="C-300x300-1" / data-editable="true" data-field="image" data-image-src="./images/13de1b2ef6764fc5bc4c58872c53feff.png"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Jaiselle Escobedo</h5><span class="team-slide-position">Associate</span></div></a></div><div class="team-slide" data-group="team-management"><a href="./team/6950f691265a860220aa72af.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/5e33a40c6c054adbaa00d3cd1fb68d0a.jpg" alt="C-300x300-1" / data-editable="true" data-field="image" data-image-src="./images/5e33a40c6c054adbaa00d3cd1fb68d0a.jpg"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Jenny Wallace</h5><span class="team-slide-position">Company Director</span></div></a></div><div class="team-slide" data-group="team-payroll"><a href="./team/6950f691265a860220aa72b2.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/4be561b21c9b478e9d2b170b772faf37.png" alt="Manju Davis" / data-editable="true" data-field="image" data-image-src="./images/4be561b21c9b478e9d2b170b772faf37.png"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Manju Davis</h5><span class="team-slide-position">Associate</span></div></a></div></div>
+                <div class="team-slider-track"><div class="team-slide" data-group="team-it-services"><a href="./team/andre-liswoyo.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/TeamMembers/6950f691265a860220aa72b4/2d6895ea2aca4e6d847457c3c5333884.jpg" alt="Andre Liswoyo" / data-editable="true" data-field="image" data-image-src="./images/TeamMembers/6950f691265a860220aa72b4/2d6895ea2aca4e6d847457c3c5333884.jpg"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Andre Liswoyo</h5><span class="team-slide-position">Graduate</span></div></a></div><div class="team-slide" data-group="team-management"><a href="./team/craig-sparks.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/60a6a884e3b740aa965a91141b912700.jpg" alt="Craig Sparks" / data-editable="true" data-field="image" data-image-src="./images/60a6a884e3b740aa965a91141b912700.jpg"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Craig Sparks</h5><span class="team-slide-position">Company Director</span></div></a></div><div class="team-slide" data-group="team-accounting-services"><a href="./team/jaiselle-escobedo.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/13de1b2ef6764fc5bc4c58872c53feff.png" alt="C-300x300-1" / data-editable="true" data-field="image" data-image-src="./images/13de1b2ef6764fc5bc4c58872c53feff.png"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Jaiselle Escobedo</h5><span class="team-slide-position">Associate</span></div></a></div><div class="team-slide" data-group="team-management"><a href="./team/jenny-wallace.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/5e33a40c6c054adbaa00d3cd1fb68d0a.jpg" alt="C-300x300-1" / data-editable="true" data-field="image" data-image-src="./images/5e33a40c6c054adbaa00d3cd1fb68d0a.jpg"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Jenny Wallace</h5><span class="team-slide-position">Company Director</span></div></a></div><div class="team-slide" data-group="team-payroll"><a href="./team/manju-davis.html" class="team-slide-link"><div class="team-slide-image" style="--img-position: top center;"><img src="./images/4be561b21c9b478e9d2b170b772faf37.png" alt="Manju Davis" / data-editable="true" data-field="image" data-image-src="./images/4be561b21c9b478e9d2b170b772faf37.png"></div><div class="team-slide-content"><h5 class="team-slide-name" data-editable="true" data-field="text">Manju Davis</h5><span class="team-slide-position">Associate</span></div></a></div></div>
                 <button class="slider-nav slider-nav-next" onclick="scrollTeamSlider(1)" aria-label="Next"><i class="fa fa-chevron-right"></i></button></div>
-            <div class="text-center mt-3"><a href="./AboutUs.html" class="btn btn-outline-primary">
+            <div class="text-center mt-3"><a href="./aboutus.html" class="btn btn-outline-primary">
                     Meet the Team <i class="fa fa-arrow-right ms-1"></i></a></div></div>
                 </div>
             </article>
@@ -1198,7 +1511,7 @@
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="banner" onclick="openGalleryLightbox(&#x27;/images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg&#x27;, &#x27;Christmas celebration photos -Jenny, Manju and Aditi&#x27;, &#x27;banner&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg" alt="Christmas celebration photos -Jenny, Manju and Aditi" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/banner/d633482dfc4845e79ea9babbe6ca9cdc.jpg">
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="banner" onclick="openGalleryLightbox(&#x27;/images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg&#x27;, &#x27;Christmas celebration photos -Jenny and Kate&#x27;, &#x27;banner&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg" alt="Christmas celebration photos -Jenny and Kate" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/banner/b346bc9e4dd548a3a21d444f28491d86.jpg">
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="banner" onclick="openGalleryLightbox(&#x27;/images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg&#x27;, &#x27;Christmas celebration photos -Craig and Andre&#x27;, &#x27;banner&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg" alt="Christmas celebration photos -Craig and Andre" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/banner/1fb0cf84cb5647cb8f4086ec4a98cd78.jpg">
-                                <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="banner" onclick="openGalleryLightbox(&#x27;/images/MaxAccountancy/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg&#x27;, &#x27;gandr-collage (2)&#x27;, &#x27;banner&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/MaxAccountancy/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg" alt="gandr-collage (2)" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/MaxAccountancy/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg">
+                                <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="banner" onclick="openGalleryLightbox(&#x27;/images/MaxAccountancy/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg&#x27;, &#x27;gandr-collage (2)&#x27;, &#x27;banner&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg" alt="gandr-collage (2)" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/banner/276d8a4f8d4f41e9995f0feb9b405387.jpg">
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="Opening" onclick="openGalleryLightbox(&#x27;/images/Gallery/xmas-2025/f51fe228b72249efb73b9d42ac04d4ee.jpg&#x27;, &#x27;127247587_10158605438061226_8856018744704754718_n&#x27;, &#x27;Opening&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/xmas-2025/f51fe228b72249efb73b9d42ac04d4ee.jpg" alt="127247587_10158605438061226_8856018744704754718_n" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/f51fe228b72249efb73b9d42ac04d4ee.jpg">
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="Xmas 2025" onclick="openGalleryLightbox(&#x27;/images/Gallery/xmas-2025/36994f20b4534b3e881f1b291e969f7c.jpg&#x27;, &#x27;line_oa_chat_251217_104858&#x27;, &#x27;Xmas 2025&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/xmas-2025/36994f20b4534b3e881f1b291e969f7c.jpg" alt="line_oa_chat_251217_104858" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/36994f20b4534b3e881f1b291e969f7c.jpg">
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="Xmas 2025" onclick="openGalleryLightbox(&#x27;/images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg&#x27;, &#x27;Christmas celebration photos -Jenny and Kate&#x27;, &#x27;Xmas 2025&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg" alt="Christmas celebration photos -Jenny and Kate" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/dcb5115f5375411b8a92e6650c754cb8.jpg">
@@ -1206,7 +1519,7 @@
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div><div class="gallery-slide" data-group="Xmas 2025" onclick="openGalleryLightbox(&#x27;/images/Gallery/xmas-2025/9956a3e87e5e4158b9f891176ff15527.jpg&#x27;, &#x27;Christmas celebration photos -Jenny and Kate&#x27;, &#x27;Xmas 2025&#x27; )" style="cursor: pointer;"><div class="gallery-slide-image"><img src="./images/Gallery/xmas-2025/9956a3e87e5e4158b9f891176ff15527.jpg" alt="Christmas celebration photos -Jenny and Kate" loading="lazy" / data-editable="true" data-field="image" data-image-src="./images/Gallery/xmas-2025/9956a3e87e5e4158b9f891176ff15527.jpg">
                                 <div class="gallery-slide-overlay"><i class="fa fa-search-plus"></i></div></div></div></div>
                 <button class="slider-nav slider-nav-next" onclick="scrollGallerySlider(1)" aria-label="Next"><i class="fa fa-chevron-right"></i></button></div>
-            <div class="text-center mt-3"><a href="./Gallery.html" class="btn btn-outline-primary">
+            <div class="text-center mt-3"><a href="./gallery.html" class="btn btn-outline-primary">
                     View Full Gallery <i class="fa fa-arrow-right ms-1"></i></a></div></div><style>
             .gallery-slider-container {
                 position: relative;
@@ -1497,7 +1810,9 @@
             
             <!-- Social Links & Copyright -->
             <div class="col-md-4 text-md-end">
-                <small class="text-muted">&copy; 2026 Max Accountancy</small>
+                <small class="text-muted">&copy; 2026 Max Accountancy Site Created by Max Web Limnited support@maxweb.co.nz</small>
+                    <br />
+                    <a class="small" href="./downloads.html"><i class="fa fa-download me-1"></i>Downloads</a>
             </div>
         </div>
     </div>
@@ -1509,7 +1824,7 @@
             <span>
                 We use cookies to enhance your experience and for authentication purposes. 
                 By continuing to use this site, you agree to our use of cookies.
-                <a href="./PrivacyPolicy.html" class="cookie-consent-link">Learn more</a></span></div>
+                <a href="./privacy-policy.html" class="cookie-consent-link">Learn more</a></span></div>
         <div class="cookie-consent-buttons"><button class="btn btn-outline-light btn-sm me-2" onclick="window.cookieConsent.decline()">
                 Decline
             </button>
@@ -1517,6 +1832,40 @@
             </button></div></div></div>
 
     <!-- SEO Analyzer Panel (only show for authenticated admin users, not static generation, not SuperAdmin pages) -->
+        <div class="seo-analyzer-tab" id="seoAnalyzerTab" onclick="window.seoAnalyzer.toggle()" title="Open SEO Analyzer" b-0l6ojrgaol><div class="seo-tab-icon" b-0l6ojrgaol><i class="fa fa-chart-line" b-0l6ojrgaol></i></div>
+        <div class="seo-tab-label" b-0l6ojrgaol>SEO</div>
+        <div class="seo-tab-arrow" b-0l6ojrgaol><i class="fa fa-chevron-right" b-0l6ojrgaol></i></div></div><div class="seo-analyzer-panel collapsed" id="seoAnalyzerPanel" b-0l6ojrgaol><div class="seo-panel-header" b-0l6ojrgaol><div class="seo-header-title" b-0l6ojrgaol><i class="fa fa-chart-line me-2" b-0l6ojrgaol></i>
+                SEO Analysis
+            </div>
+            <div class="seo-header-actions" b-0l6ojrgaol><button class="seo-btn-refresh" id="seoRefreshBtn" onclick="window.seoAnalyzer.analyze()" title="Re-analyze" b-0l6ojrgaol><i class="fa fa-sync-alt" b-0l6ojrgaol></i></button>
+                <button class="seo-btn-close" onclick="window.seoAnalyzer.toggle()" title="Close panel" b-0l6ojrgaol><i class="fa fa-chevron-left" b-0l6ojrgaol></i></button></div></div>
+
+        
+        <div class="seo-score-banner" id="seoScoreBanner" style="display: none;" b-0l6ojrgaol><div class="score-main" b-0l6ojrgaol><span class="score-value" id="seoScoreValue" b-0l6ojrgaol>0</span>
+                <span class="score-max" b-0l6ojrgaol>/100</span></div>
+            <div class="score-grade" id="seoScoreGrade" b-0l6ojrgaol>-</div>
+            <div class="score-label" id="seoScoreLabel" b-0l6ojrgaol>-</div></div>
+
+        
+        <div class="seo-panel-content" id="seoPanelContent" b-0l6ojrgaol><div class="seo-start-state" id="seoStartState" b-0l6ojrgaol><i class="fa fa-search fa-3x mb-3" b-0l6ojrgaol></i>
+                <h5 b-0l6ojrgaol data-editable="true" data-field="text">SEO Analysis</h5>
+                <p b-0l6ojrgaol>Click to analyze this page for SEO improvements</p>
+                <button class="btn btn-primary" onclick="window.seoAnalyzer.analyze()" b-0l6ojrgaol><i class="fa fa-play me-2" b-0l6ojrgaol></i>
+                    Start Analysis
+                </button></div>
+            <div class="seo-loading-state" id="seoLoadingState" style="display: none;" b-0l6ojrgaol><i class="fa fa-spinner fa-spin fa-2x" b-0l6ojrgaol></i>
+                <p b-0l6ojrgaol>Analyzing page...</p></div>
+            <div class="seo-error-state" id="seoErrorState" style="display: none;" b-0l6ojrgaol><i class="fa fa-exclamation-triangle fa-2x" b-0l6ojrgaol></i>
+                <p id="seoErrorMessage" b-0l6ojrgaol>Failed to analyze page.</p>
+                <button class="btn btn-sm btn-outline-light" onclick="window.seoAnalyzer.analyze()" b-0l6ojrgaol>
+                    Try Again
+                </button></div>
+            <div class="seo-checklist" id="seoChecklist" style="display: none;" b-0l6ojrgaol></div>
+            <div class="seo-suggestions-section" id="seoSuggestions" style="display: none;" b-0l6ojrgaol></div></div>
+
+        
+        <div class="seo-panel-footer" b-0l6ojrgaol><span class="footer-url" id="seoFooterUrl" b-0l6ojrgaol><i class="fa fa-link me-1" b-0l6ojrgaol></i>
+                <span id="seoPagePath" b-0l6ojrgaol>-</span></span></div></div>
 
     <script src="./lib/jquery/dist/jquery.min.js"></script>
         <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -1669,7 +2018,7 @@
     </script>
 
     <script src="/js/static-logger.js"></script>
-<script src="/js/public/preview-editor.js" id="preview-editor-script"></script>
+<script src="/js/superadmin/preview-editor.js" id="preview-editor-script"></script>
 </body>
     </html>
 

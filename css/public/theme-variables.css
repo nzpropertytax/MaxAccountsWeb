@@ -1,0 +1,124 @@
+/* ===== SITE THEME CSS VARIABLES ===== */
+/* 
+ * This file applies CSS variables defined by the CSS Editor to key site elements.
+ * Variables are dynamically injected into the page from the database.
+ * 
+ * The :root variables are set in _Layout.cshtml via SiteThemeModel.GenerateCssVariables()
+ */
+
+/* ===== BASE STYLES ===== */
+body {
+    font-family: var(--site-font-family);
+    color: var(--site-text);
+    background-color: var(--site-bg);
+}
+
+/* ===== NAVBAR THEME ===== */
+.navbar {
+    background-color: var(--site-navbar-bg) !important;
+}
+
+.navbar .nav-link {
+    color: var(--site-navbar-text) !important;
+}
+
+.navbar .navbar-brand {
+    color: var(--site-navbar-text);
+}
+
+.navbar .navbar-toggler {
+    border-color: var(--site-navbar-text);
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51,51,51,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dark navbar support - when navbar bg is dark, use light text */
+.navbar.navbar-dark .nav-link,
+.navbar.bg-dark .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.navbar.navbar-dark .nav-link:hover,
+.navbar.bg-dark .nav-link:hover {
+    color: #fff !important;
+}
+
+/* ===== FOOTER THEME ===== */
+/* Footer styling is in site.css using var(--site-footer-*) */
+
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--site-heading);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--site-link);
+}
+
+a:hover {
+    color: var(--site-link-hover);
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background-color: var(--site-btn-primary-bg);
+    border-color: var(--site-primary-dark);
+    color: var(--site-btn-primary-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--site-primary-dark);
+    border-color: var(--site-primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--site-btn-secondary-bg);
+    color: var(--site-btn-secondary-text);
+}
+
+/* ===== CARDS ===== */
+.card {
+    background-color: var(--site-card-bg);
+    border: 1px solid var(--site-border-light);
+}
+
+/* ===== FORMS ===== */
+.form-control:focus {
+    border-color: var(--site-primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(27, 110, 194, 0.25);
+}
+
+/* ===== UTILITIES ===== */
+.text-muted {
+    color: var(--site-text-muted) !important;
+}
+
+.border {
+    border-color: var(--site-border) !important;
+}
+
+.bg-primary {
+    background-color: var(--site-primary) !important;
+}
+
+.text-primary {
+    color: var(--site-primary) !important;
+}
+
+.accent-highlight {
+    color: var(--site-accent);
+}
+
+/* ===== SELECTION COLOR ===== */
+::selection {
+    background-color: var(--site-primary);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--site-primary);
+    color: white;
+}
